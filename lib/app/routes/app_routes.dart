@@ -11,6 +11,9 @@ abstract class Routes {
       _Paths.FORGET_PASSWORD_OTP_VERIFICATION;
   static const CHANGE_PASSWORD = _Paths.CHANGE_PASSWORD;
   static const CHANGE_PASSWORD_SUCCESS = _Paths.CHANGE_PASSWORD_SUCCESS;
+  static const ABOUT_SHOP = _Paths.ABOUT_SHOP;
+  static const UPDATE_ABOUT_SHOP = _Paths.UPDATE_ABOUT_SHOP;
+  static const ABOUT_APP = _Paths.ABOUT_APP;
 }
 
 abstract class _Paths {
@@ -23,4 +26,7 @@ abstract class _Paths {
       '/forget-password-otp-verification';
   static const CHANGE_PASSWORD = '/change-password';
   static const CHANGE_PASSWORD_SUCCESS = '/change-password-success';
+  static const ABOUT_SHOP = '/about-shop';
+  static const UPDATE_ABOUT_SHOP = '/update-about-shop';
+  static const ABOUT_APP = '/about-app';
 }

@@ -1,5 +1,9 @@
 import 'package:get/get.dart';
 
+import '../modules/about_app/bindings/about_app_binding.dart';
+import '../modules/about_app/views/about_app_view.dart';
+import '../modules/about_shop/bindings/about_shop_binding.dart';
+import '../modules/about_shop/views/about_shop_view.dart';
 import '../modules/change_password/bindings/change_password_binding.dart';
 import '../modules/change_password/views/change_password_view.dart';
 import '../modules/change_password_success/bindings/change_password_success_binding.dart';
@@ -14,6 +18,8 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/splash_screen/bindings/splash_screen_binding.dart';
 import '../modules/splash_screen/views/splash_screen_view.dart';
+import '../modules/update_about_shop/bindings/update_about_shop_binding.dart';
+import '../modules/update_about_shop/views/update_about_shop_view.dart';
 
 part 'app_routes.dart';
 
@@ -57,6 +63,21 @@ class AppPages {
       name: _Paths.CHANGE_PASSWORD_SUCCESS,
       page: () => const ChangePasswordSuccessView(),
       binding: ChangePasswordSuccessBinding(),
+    ),
+    GetPage(
+      name: _Paths.ABOUT_SHOP,
+      page: () => const AboutShopView(),
+      binding: AboutShopBinding(),
+    ),
+    GetPage(
+      name: _Paths.UPDATE_ABOUT_SHOP,
+      page: () => const UpdateAboutShopView(),
+      binding: UpdateAboutShopBinding(),
+    ),
+    GetPage(
+      name: _Paths.ABOUT_APP,
+      page: () => const AboutAppView(),
+      binding: AboutAppBinding(),
     ),
   ];
 }

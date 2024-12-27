@@ -19,7 +19,7 @@ class LoginView extends GetView<LoginController> {
           backgroundColor: Colors.transparent,
           body: LayoutBuilder(
             builder: (context, constraints) {
-              final maxHeight = constraints.maxHeight;
+                final maxHeight = constraints.maxHeight;
               return SingleChildScrollView(
                 child: ConstrainedBox(
                   constraints: BoxConstraints(minHeight: maxHeight),
@@ -188,7 +188,9 @@ class LoginView extends GetView<LoginController> {
                                     padding:
                                     EdgeInsets.fromLTRB(20.0, 12.0, 20.0, 12.0),
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.toNamed(Routes.HOME);
+                                  },
                                   child: Text(
                                     'Masuk',
                                     style: TextStyle(

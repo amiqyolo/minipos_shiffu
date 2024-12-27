@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class LoginController extends GetxController {
+class ChangePasswordController extends GetxController {
   RxBool _isPassVisibility = false.obs;
 
   RxBool get isPassVisibility => _isPassVisibility;

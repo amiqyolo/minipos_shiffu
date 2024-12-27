@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:minipos_shiffu/app/routes/app_pages.dart';
 
-import '../controllers/login_controller.dart';
+import '../../../routes/app_pages.dart';
+import '../controllers/forget_password_controller.dart';
 
-class LoginView extends GetView<LoginController> {
-  const LoginView({super.key});
+class ForgetPasswordView extends GetView<ForgetPasswordController> {
+  const ForgetPasswordView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class LoginView extends GetView<LoginController> {
                           Column(
                             children: [
                               Text(
-                                'Selamat Datang Kembali',
+                                'Lupa Password',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 20.0,
@@ -96,88 +96,6 @@ class LoginView extends GetView<LoginController> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 16.0),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Password',
-                                      style: TextStyle(
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.w400,
-                                        color: Color(0xFF4F62C1),
-                                      ),
-                                    ),
-                                    SizedBox(height: 8.0),
-                                    TextField(
-                                      decoration: InputDecoration(
-                                        suffixIcon: IconButton(
-                                          onPressed: () {
-                                            controller.isPassVisibility.value =
-                                            !controller
-                                                .isPassVisibility.value;
-                                          },
-                                          icon: Obx(
-                                                () => controller
-                                                .isPassVisibility.value
-                                                ? Icon(Icons.visibility)
-                                                : Icon(Icons.visibility_off),
-                                          ),
-                                        ),
-                                        hintText: 'Masukkan Password Kamu',
-                                        hintStyle: TextStyle(
-                                          fontSize: 14.0,
-                                          color: Color(0xFF6D6D85),
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                        border: const OutlineInputBorder(),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 4.0),
-                                InkWell(
-                                  onTap: () {
-                                    Get.toNamed(Routes.FORGET_PASSWORD);
-                                  },
-                                  child: Align(
-                                    alignment: Alignment.centerRight,
-                                    child: Text(
-                                      'Lupa Password ?',
-                                      style: TextStyle(
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xFF4F62C1),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: 8.0),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Kode Toko',
-                                      style: TextStyle(
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.w400,
-                                        color: Color(0xFF4F62C1),
-                                      ),
-                                    ),
-                                    SizedBox(height: 8.0),
-                                    TextField(
-                                      decoration: InputDecoration(
-                                        hintText: 'Masukkan Kode Toko Kamu',
-                                        hintStyle: TextStyle(
-                                          fontSize: 14.0,
-                                          color: Color(0xFF6D6D85),
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                        border: const OutlineInputBorder(),
-                                      ),
-                                    ),
-                                  ],
-                                ),
                                 SizedBox(height: 30.0),
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -185,12 +103,15 @@ class LoginView extends GetView<LoginController> {
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    padding:
-                                    EdgeInsets.fromLTRB(20.0, 12.0, 20.0, 12.0),
+                                    padding: EdgeInsets.fromLTRB(
+                                        20.0, 12.0, 20.0, 12.0),
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.toNamed(Routes
+                                        .FORGET_PASSWORD_OTP_VERIFICATION);
+                                  },
                                   child: Text(
-                                    'Masuk',
+                                    'Kirim OTP',
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.w600,
@@ -214,7 +135,7 @@ class LoginView extends GetView<LoginController> {
                                     InkWell(
                                       onTap: () {},
                                       child: Text(
-                                        'Request Akun Demo',
+                                        'Daftar disini',
                                         style: TextStyle(
                                           color: Color(0xFF4F62C1),
                                         ),

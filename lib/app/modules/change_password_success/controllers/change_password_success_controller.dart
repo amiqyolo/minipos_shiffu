@@ -1,10 +1,9 @@
 import 'package:get/get.dart';
 
-class LoginController extends GetxController {
-  RxBool _isPassVisibility = false.obs;
+class ChangePasswordSuccessController extends GetxController {
+  //TODO: Implement ChangePasswordSuccessController
 
-  RxBool get isPassVisibility => _isPassVisibility;
-
+  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -19,4 +18,6 @@ class LoginController extends GetxController {
   void onClose() {
     super.onClose();
   }
+
+  void increment() => count.value++;
 }

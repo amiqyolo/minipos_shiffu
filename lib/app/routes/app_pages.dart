@@ -16,6 +16,10 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/point_of_sales/bindings/point_of_sales_binding.dart';
+import '../modules/point_of_sales/views/point_of_sales_view.dart';
+import '../modules/purchase_detail/bindings/purchase_detail_binding.dart';
+import '../modules/purchase_detail/views/purchase_detail_view.dart';
 import '../modules/splash_screen/bindings/splash_screen_binding.dart';
 import '../modules/splash_screen/views/splash_screen_view.dart';
 import '../modules/update_about_shop/bindings/update_about_shop_binding.dart';
@@ -78,6 +82,16 @@ class AppPages {
       name: _Paths.ABOUT_APP,
       page: () => const AboutAppView(),
       binding: AboutAppBinding(),
+    ),
+    GetPage(
+      name: _Paths.POINT_OF_SALES,
+      page: () => const PointOfSalesView(),
+      binding: PointOfSalesBinding(),
+    ),
+    GetPage(
+      name: _Paths.PURCHASE_DETAIL,
+      page: () => const PurchaseDetailView(),
+      binding: PurchaseDetailBinding(),
     ),
   ];
 }

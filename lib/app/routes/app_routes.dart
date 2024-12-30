@@ -14,6 +14,8 @@ abstract class Routes {
   static const ABOUT_SHOP = _Paths.ABOUT_SHOP;
   static const UPDATE_ABOUT_SHOP = _Paths.UPDATE_ABOUT_SHOP;
   static const ABOUT_APP = _Paths.ABOUT_APP;
+  static const POINT_OF_SALES = _Paths.POINT_OF_SALES;
+  static const PURCHASE_DETAIL = _Paths.PURCHASE_DETAIL;
 }
 
 abstract class _Paths {
@@ -29,4 +31,6 @@ abstract class _Paths {
   static const ABOUT_SHOP = '/about-shop';
   static const UPDATE_ABOUT_SHOP = '/update-about-shop';
   static const ABOUT_APP = '/about-app';
+  static const POINT_OF_SALES = '/point-of-sales';
+  static const PURCHASE_DETAIL = '/purchase-detail';
 }

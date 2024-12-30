@@ -166,11 +166,26 @@ class HomeView extends GetView<HomeController> {
                 crossAxisSpacing: 16,
                 mainAxisSpacing: 16,
                 children: [
-                  _buildMenuItem('assets/vectors/menu_shop.svg', 'POS'),
-                  _buildMenuItem('assets/vectors/menu_bag.svg', 'PRODUCT'),
-                  _buildMenuItem('assets/vectors/menu_buy.svg', 'PENJUALAN'),
                   _buildMenuItem(
-                      'assets/vectors/menu_bill.svg', 'REKAP PENJUALAN'),
+                    'assets/vectors/menu_shop.svg',
+                    'POS',
+                    () => Get.toNamed(Routes.POINT_OF_SALES),
+                  ),
+                  _buildMenuItem(
+                    'assets/vectors/menu_bag.svg',
+                    'PRODUCT',
+                    () => Get.toNamed(Routes.HOME),
+                  ),
+                  _buildMenuItem(
+                    'assets/vectors/menu_buy.svg',
+                    'PENJUALAN',
+                    () => Get.toNamed(Routes.HOME),
+                  ),
+                  _buildMenuItem(
+                    'assets/vectors/menu_bill.svg',
+                    'REKAP PENJUALAN',
+                    () => Get.toNamed(Routes.HOME),
+                  ),
                 ],
               ),
             ],
@@ -180,9 +195,11 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  Widget _buildMenuItem(String icon, String label) {
+  Widget _buildMenuItem(String icon, String label, VoidCallback onClick) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        onClick();
+      },
       borderRadius: BorderRadius.circular(12.0),
       splashColor: Color(0xFF4F62C1),
       child: Container(

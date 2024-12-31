@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:get/get.dart';
-import 'package:minipos_shiffu/app/modules/widgets/pos_purchase_detail_card.dart';
 
-import '../../widgets/payment_method_selector.dart';
 import '../../widgets/pos_product_detail_card.dart';
 import '../controllers/product_detail_controller.dart';
 
 class ProductDetailView extends GetView<ProductDetailController> {
   const ProductDetailView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
@@ -39,7 +37,7 @@ class ProductDetailView extends GetView<ProductDetailController> {
                           SvgPicture.asset(
                             'assets/vectors/minipos_logo.svg',
                             colorFilter:
-                            ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                                ColorFilter.mode(Colors.white, BlendMode.srcIn),
                             width: 24.0,
                           ),
                           SizedBox(width: 8.0),
@@ -114,9 +112,7 @@ class ProductDetailView extends GetView<ProductDetailController> {
                   SizedBox(width: 16.0),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {
-
-                      },
+                      onPressed: () {},
                       child: Text(
                         "Bayar",
                         style: TextStyle(
@@ -138,36 +134,6 @@ class ProductDetailView extends GetView<ProductDetailController> {
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _paymentDetailRow({
-    required String label,
-    required String value,
-    bool isBold = false,
-  }) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            label,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
-            ),
-          ),
-          Text(
-            value,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
-              color: isBold ? Colors.blue : Colors.black,
-            ),
-          ),
-        ],
       ),
     );
   }

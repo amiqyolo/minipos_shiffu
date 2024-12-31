@@ -15,20 +15,31 @@ class _PaymentMethodSelectorState extends State<PaymentMethodSelector> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        PaymentMethodButton(
-          label: "Qris",
-          isSelected: _selectedMethod == 0,
-          onTap: () => setState(() => _selectedMethod = 0),
+        Expanded(
+          child: PaymentMethodButton(
+            label: "Qris",
+            fileVector: 'qris.svg',
+            isSelected: _selectedMethod == 0,
+            onTap: () => setState(() => _selectedMethod = 0),
+          ),
         ),
-        PaymentMethodButton(
-          label: "Transfer",
-          isSelected: _selectedMethod == 1,
-          onTap: () => setState(() => _selectedMethod = 1),
+        SizedBox(width: 14.0),
+        Expanded(
+          child: PaymentMethodButton(
+            label: "Transfer",
+            fileVector: 'tranfers.svg',
+            isSelected: _selectedMethod == 1,
+            onTap: () => setState(() => _selectedMethod = 1),
+          ),
         ),
-        PaymentMethodButton(
-          label: "Tunai",
-          isSelected: _selectedMethod == 2,
-          onTap: () => setState(() => _selectedMethod = 2),
+        SizedBox(width: 14.0),
+        Expanded(
+          child: PaymentMethodButton(
+            label: "Tunai",
+            fileVector: 'moneys.svg',
+            isSelected: _selectedMethod == 2,
+            onTap: () => setState(() => _selectedMethod = 2),
+          ),
         ),
       ],
     );

@@ -75,6 +75,7 @@ class PurchaseDetailView extends GetView<PurchaseDetailController> {
                         style: TextStyle(
                           fontSize: 14.0,
                           fontWeight: FontWeight.w500,
+                          color: Colors.black,
                         ),
                       ),
                       SizedBox(height: 6.0),
@@ -90,7 +91,10 @@ class PurchaseDetailView extends GetView<PurchaseDetailController> {
                       Text(
                         "Metode Pembayaran",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black,
+                        ),
                       ),
                       SizedBox(height: 8),
                       PaymentMethodSelector(),

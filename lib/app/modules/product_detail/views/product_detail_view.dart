@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:minipos_shiffu/app/routes/app_pages.dart';
 
 import '../../widgets/pos_product_detail_card.dart';
 import '../controllers/product_detail_controller.dart';
@@ -112,7 +113,9 @@ class ProductDetailView extends GetView<ProductDetailController> {
                   SizedBox(width: 16.0),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(Routes.PAYMENT_SUMMARY);
+                      },
                       child: Text(
                         "Bayar",
                         style: TextStyle(

@@ -174,7 +174,7 @@ class HomeView extends GetView<HomeController> {
                   _buildMenuItem(
                     'assets/vectors/menu_bag.svg',
                     'PRODUCT',
-                    () => Get.toNamed(Routes.HOME),
+                    () => Get.toNamed(Routes.PRODUCT),
                   ),
                   _buildMenuItem(
                     'assets/vectors/menu_buy.svg',

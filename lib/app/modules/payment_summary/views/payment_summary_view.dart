@@ -155,7 +155,7 @@ class PaymentSummaryView extends GetView<PaymentSummaryController> {
           bottomNavigationBar: BottomAppBar(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: PaymentPrintButton(isPaid: false),
+              child: PaymentPrintButton(isPaid: true),
             ),
           ),
         ),

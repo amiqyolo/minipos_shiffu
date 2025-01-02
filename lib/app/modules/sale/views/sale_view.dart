@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:get/get.dart';
 
 import '../../widgets/sale_item_invoice_card.dart';
@@ -8,6 +7,7 @@ import '../controllers/sale_controller.dart';
 
 class SaleView extends GetView<SaleController> {
   const SaleView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
@@ -37,7 +37,7 @@ class SaleView extends GetView<SaleController> {
                           SvgPicture.asset(
                             'assets/vectors/minipos_logo.svg',
                             colorFilter:
-                            ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                                ColorFilter.mode(Colors.white, BlendMode.srcIn),
                             width: 24.0,
                           ),
                           SizedBox(width: 8.0),
@@ -92,15 +92,36 @@ class SaleView extends GetView<SaleController> {
                         ),
                       ),
                       SizedBox(height: 16.0),
-                      ListView.builder(
-                        shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        itemCount: controller.invoiceData.length,
-                        itemBuilder: (context, index) {
-                          final data = controller.invoiceData[index];
-                          return SaleItemInvoiceCard(data: data);
-                        },
-                      ),
+                      controller.invoiceData.isEmpty
+                          ? Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SvgPicture.asset(
+                                    'assets/vectors/empty_sale.svg',
+                                    width: 124.0,
+                                  ),
+                                  SizedBox(height: 16.0),
+                                  Text(
+                                    'Data invoice tidak tersedia',
+                                    style: TextStyle(
+                                      color: Color(0xFF1F2933),
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          : ListView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: controller.invoiceData.length,
+                              itemBuilder: (context, index) {
+                                final data = controller.invoiceData[index];
+                                return SaleItemInvoiceCard(data: data);
+                              },
+                            ),
                     ],
                   ),
                 ),

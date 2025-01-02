@@ -100,7 +100,7 @@ class ProductView extends GetView<ProductController> {
                         itemBuilder: (context, index) {
                           return ProductItemCard(
                             onClick: () {
-                              Get.toNamed(Routes.PURCHASE_DETAIL);
+                              Get.toNamed(Routes.PRODUCT_DETAIL);
                             },
                           );
                         },

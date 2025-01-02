@@ -28,6 +28,8 @@ import '../modules/product_detail/bindings/product_detail_binding.dart';
 import '../modules/product_detail/views/product_detail_view.dart';
 import '../modules/purchase_detail/bindings/purchase_detail_binding.dart';
 import '../modules/purchase_detail/views/purchase_detail_view.dart';
+import '../modules/sale/bindings/sale_binding.dart';
+import '../modules/sale/views/sale_view.dart';
 import '../modules/splash_screen/bindings/splash_screen_binding.dart';
 import '../modules/splash_screen/views/splash_screen_view.dart';
 import '../modules/update_about_shop/bindings/update_about_shop_binding.dart';
@@ -127,6 +129,11 @@ class AppPages {
       name: _Paths.UPDATE_PRODUCT_DETAIL,
       page: () => const UpdateProductDetailView(),
       binding: UpdateProductDetailBinding(),
+    ),
+    GetPage(
+      name: _Paths.SALE,
+      page: () => const SaleView(),
+      binding: SaleBinding(),
     ),
   ];
 }

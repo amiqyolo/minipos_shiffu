@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:minipos_shiffu/app/routes/app_pages.dart';
 
 import '../../widgets/sale_item_invoice_card.dart';
 import '../controllers/sale_controller.dart';
@@ -119,7 +120,11 @@ class SaleView extends GetView<SaleController> {
                               itemCount: controller.invoiceData.length,
                               itemBuilder: (context, index) {
                                 final data = controller.invoiceData[index];
-                                return SaleItemInvoiceCard(data: data);
+                                return SaleItemInvoiceCard(
+                                  data: data,
+                                  onTap: () =>
+                                      Get.toNamed(Routes.SALE_PAYMENT_SUMMARY),
+                                );
                               },
                             ),
                     ],

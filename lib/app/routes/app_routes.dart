@@ -20,6 +20,7 @@ abstract class Routes {
   static const PAYMENT_SUMMARY = _Paths.PAYMENT_SUMMARY;
   static const PRODUCT = _Paths.PRODUCT;
   static const POS_PRODUCT_DETAIL = _Paths.POS_PRODUCT_DETAIL;
+  static const UPDATE_PRODUCT_DETAIL = _Paths.UPDATE_PRODUCT_DETAIL;
 }
 
 abstract class _Paths {
@@ -41,4 +42,5 @@ abstract class _Paths {
   static const PAYMENT_SUMMARY = '/payment-summary';
   static const PRODUCT = '/product';
   static const POS_PRODUCT_DETAIL = '/pos-product-detail';
+  static const UPDATE_PRODUCT_DETAIL = '/update-product-detail';
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:minipos_shiffu/app/routes/app_pages.dart';
 
 import '../controllers/product_detail_controller.dart';
 
@@ -239,7 +240,9 @@ class ProductDetailView extends GetView<ProductDetailController> {
                                     Row(
                                       children: [
                                         ElevatedButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Get.toNamed(Routes.UPDATE_PRODUCT_DETAIL);
+                                          },
                                           style: ElevatedButton.styleFrom(
                                             backgroundColor: Color(0xFF6C7CCB),
                                             shape: RoundedRectangleBorder(

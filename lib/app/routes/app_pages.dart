@@ -32,6 +32,8 @@ import '../modules/splash_screen/bindings/splash_screen_binding.dart';
 import '../modules/splash_screen/views/splash_screen_view.dart';
 import '../modules/update_about_shop/bindings/update_about_shop_binding.dart';
 import '../modules/update_about_shop/views/update_about_shop_view.dart';
+import '../modules/update_product_detail/bindings/update_product_detail_binding.dart';
+import '../modules/update_product_detail/views/update_product_detail_view.dart';
 
 part 'app_routes.dart';
 
@@ -120,6 +122,11 @@ class AppPages {
       name: _Paths.POS_PRODUCT_DETAIL,
       page: () => const PosProductDetailView(),
       binding: PosProductDetailBinding(),
+    ),
+    GetPage(
+      name: _Paths.UPDATE_PRODUCT_DETAIL,
+      page: () => const UpdateProductDetailView(),
+      binding: UpdateProductDetailBinding(),
     ),
   ];
 }

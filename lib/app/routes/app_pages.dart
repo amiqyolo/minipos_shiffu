@@ -32,6 +32,8 @@ import '../modules/sale/bindings/sale_binding.dart';
 import '../modules/sale/views/sale_view.dart';
 import '../modules/sale_payment_summary/bindings/sale_payment_summary_binding.dart';
 import '../modules/sale_payment_summary/views/sale_payment_summary_view.dart';
+import '../modules/sales_recap/bindings/sales_recap_binding.dart';
+import '../modules/sales_recap/views/sales_recap_view.dart';
 import '../modules/splash_screen/bindings/splash_screen_binding.dart';
 import '../modules/splash_screen/views/splash_screen_view.dart';
 import '../modules/update_about_shop/bindings/update_about_shop_binding.dart';
@@ -141,6 +143,11 @@ class AppPages {
       name: _Paths.SALE_PAYMENT_SUMMARY,
       page: () => const SalePaymentSummaryView(),
       binding: SalePaymentSummaryBinding(),
+    ),
+    GetPage(
+      name: _Paths.SALES_RECAP,
+      page: () => const SalesRecapView(),
+      binding: SalesRecapBinding(),
     ),
   ];
 }

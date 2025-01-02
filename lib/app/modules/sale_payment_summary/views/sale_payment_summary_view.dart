@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-import '../../../routes/app_pages.dart';
-import '../../widgets/product_item_card.dart';
 import '../../widgets/sale_purchase_item_card.dart';
 import '../controllers/sale_payment_summary_controller.dart';
 
@@ -38,8 +36,8 @@ class SalePaymentSummaryView extends GetView<SalePaymentSummaryController> {
                         children: [
                           SvgPicture.asset(
                             'assets/vectors/minipos_logo.svg',
-                            colorFilter: ColorFilter.mode(
-                                Colors.white, BlendMode.srcIn),
+                            colorFilter:
+                                ColorFilter.mode(Colors.white, BlendMode.srcIn),
                             width: 24.0,
                           ),
                           SizedBox(width: 8.0),
@@ -54,7 +52,7 @@ class SalePaymentSummaryView extends GetView<SalePaymentSummaryController> {
                         ],
                       ),
                       Text(
-                        'POS',
+                        'PENJUALAN',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,

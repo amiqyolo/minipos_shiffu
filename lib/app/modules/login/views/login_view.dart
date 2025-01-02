@@ -19,7 +19,7 @@ class LoginView extends GetView<LoginController> {
           backgroundColor: Colors.transparent,
           body: LayoutBuilder(
             builder: (context, constraints) {
-                final maxHeight = constraints.maxHeight;
+              final maxHeight = constraints.maxHeight;
               return SingleChildScrollView(
                 child: ConstrainedBox(
                   constraints: BoxConstraints(minHeight: maxHeight),
@@ -101,7 +101,7 @@ class LoginView extends GetView<LoginController> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Password',
+                                      'Kode Toko',
                                       style: TextStyle(
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.w400,
@@ -114,59 +114,16 @@ class LoginView extends GetView<LoginController> {
                                         suffixIcon: IconButton(
                                           onPressed: () {
                                             controller.isPassVisibility.value =
-                                            !controller
-                                                .isPassVisibility.value;
+                                                !controller
+                                                    .isPassVisibility.value;
                                           },
                                           icon: Obx(
-                                                () => controller
-                                                .isPassVisibility.value
+                                            () => controller
+                                                    .isPassVisibility.value
                                                 ? Icon(Icons.visibility)
                                                 : Icon(Icons.visibility_off),
                                           ),
                                         ),
-                                        hintText: 'Masukkan Password Kamu',
-                                        hintStyle: TextStyle(
-                                          fontSize: 14.0,
-                                          color: Color(0xFF6D6D85),
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                        border: const OutlineInputBorder(),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 4.0),
-                                InkWell(
-                                  onTap: () {
-                                    Get.toNamed(Routes.FORGET_PASSWORD);
-                                  },
-                                  child: Align(
-                                    alignment: Alignment.centerRight,
-                                    child: Text(
-                                      'Lupa Password ?',
-                                      style: TextStyle(
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xFF4F62C1),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: 8.0),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Kode Toko',
-                                      style: TextStyle(
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.w400,
-                                        color: Color(0xFF4F62C1),
-                                      ),
-                                    ),
-                                    SizedBox(height: 8.0),
-                                    TextField(
-                                      decoration: InputDecoration(
                                         hintText: 'Masukkan Kode Toko Kamu',
                                         hintStyle: TextStyle(
                                           fontSize: 14.0,
@@ -178,6 +135,23 @@ class LoginView extends GetView<LoginController> {
                                     ),
                                   ],
                                 ),
+                                SizedBox(height: 6.0),
+                                InkWell(
+                                  onTap: () {
+                                    Get.toNamed(Routes.FORGET_PASSWORD);
+                                  },
+                                  child: Align(
+                                    alignment: Alignment.centerRight,
+                                    child: Text(
+                                      'Lupa Kode ?',
+                                      style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color(0xFF4F62C1),
+                                      ),
+                                    ),
+                                  ),
+                                ),
                                 SizedBox(height: 30.0),
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -185,8 +159,8 @@ class LoginView extends GetView<LoginController> {
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    padding:
-                                    EdgeInsets.fromLTRB(20.0, 12.0, 20.0, 12.0),
+                                    padding: EdgeInsets.fromLTRB(
+                                        20.0, 12.0, 20.0, 12.0),
                                   ),
                                   onPressed: () {
                                     Get.toNamed(Routes.HOME);
@@ -224,10 +198,15 @@ class LoginView extends GetView<LoginController> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 50.0),
                               ],
                             ),
                           ),
+                          SizedBox(height: 24.0),
+                          SvgPicture.asset(
+                            'assets/vectors/frame_login.svg',
+                            width: Get.width - 40.0,
+                          ),
+                          SizedBox(height: 24.0),
                         ],
                       ),
                     ),

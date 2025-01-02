@@ -103,6 +103,12 @@ class ChangePasswordSuccessView
                               ),
                             ),
                           ),
+                          SizedBox(height: 24.0),
+                          SvgPicture.asset(
+                            'assets/vectors/frame_login.svg',
+                            width: Get.width - 40.0,
+                          ),
+                          SizedBox(height: 24.0),
                         ],
                       ),
                     ),

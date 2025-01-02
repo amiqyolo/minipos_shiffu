@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/splash_screen_controller.dart';
 
 class SplashScreenView extends GetView<SplashScreenController> {
@@ -9,6 +10,11 @@ class SplashScreenView extends GetView<SplashScreenController> {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(
+      Duration(seconds: 2),
+          () => Get.toNamed(Routes.HOME),
+    );
+
     return DecoratedBox(
       decoration: BoxDecoration(
         color: Color(0xFFF4FAFA),
@@ -17,6 +23,7 @@ class SplashScreenView extends GetView<SplashScreenController> {
         backgroundColor: Colors.transparent,
         body: SafeArea(
           child: Stack(
+            alignment: Alignment.center,
             children: [
               Center(
                 child: Column(
@@ -47,33 +54,16 @@ class SplashScreenView extends GetView<SplashScreenController> {
                 ),
               ),
               Positioned(
-                bottom: 0,
-                left: 0,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SvgPicture.asset('assets/vectors/frame_item.svg'),
-                    Row(
-                      children: [
-                        Transform.rotate(
-                          angle: 3.141592653589793238462643383279502884197,
-                          child: SvgPicture.asset(
-                            'assets/vectors/frame_item.svg',
-                          ),
-                        ),
-                        SvgPicture.asset(
-                          'assets/vectors/frame_item.svg',
-                        ),
-                      ],
-                    ),
-                  ],
+                bottom: 20.0,
+                child: SvgPicture.asset(
+                  'assets/vectors/splash_frame.svg',
                 ),
               ),
               Positioned(
-                top: 0,
-                right: 0,
-                child: SvgPicture.asset(
-                  'assets/vectors/frame_item.svg',
+                top: 20.0,
+                child: Transform.flip(
+                  flipY: true,
+                  child: SvgPicture.asset('assets/vectors/splash_frame.svg'),
                 ),
               ),
             ],

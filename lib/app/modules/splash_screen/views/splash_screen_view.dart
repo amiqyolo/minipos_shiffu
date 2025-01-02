@@ -12,7 +12,7 @@ class SplashScreenView extends GetView<SplashScreenController> {
   Widget build(BuildContext context) {
     Future.delayed(
       Duration(seconds: 2),
-          () => Get.toNamed(Routes.HOME),
+          () => Get.toNamed(Routes.LOGIN),
     );
 
     return DecoratedBox(

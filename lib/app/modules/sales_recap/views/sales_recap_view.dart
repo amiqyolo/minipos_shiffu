@@ -120,15 +120,27 @@ class SalesRecapView extends GetView<SalesRecapController> {
                       SizedBox(height: 16),
 
                       // Total Penjualan
-                      Card(
-                        color: Colors.blue.shade50,
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6.0),
+                          border: Border.all(
+                            color: Color(0xFFD9D9D9),
+                            width: 1.0,
+                          ),
+                          color: Colors.white,
+                        ),
+                        padding: EdgeInsets.symmetric(vertical: 8.0),
                         child: ListTile(
                           leading: Icon(Icons.calendar_today),
                           title: Text('Total Penjualan'),
                           subtitle: Text('10 Desember 2024'),
-                          trailing: Text('Rp 900.000',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16)),
+                          trailing: Text(
+                            'Rp 900.000',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16.0,
+                            ),
+                          ),
                         ),
                       ),
 
